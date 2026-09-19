@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SAINTS — STREETWEAR</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #050505;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      background: rgba(5, 5, 5, 0.94);
+      border-bottom: 1px solid #222;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a:hover {
+      opacity: 0.55;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        radial-gradient(circle at center, #191919 0%, #050505 55%);
+    }
+
+    .hero h1 {
+      font-size: clamp(70px, 17vw, 190px);
+      line-height: 0.8;
+      font-weight: 1000;
+      letter-spacing: -8px;
+    }
+
+    .hero p {
+      margin-top: 30px;
+      letter-spacing: 8px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .hero-button {
+      margin-top: 45px;
+      padding: 17px 40px;
+      background: white;
+      color: black;
+      border: none;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transition: 0.2s;
+    }
+
+    .hero-button:hover {
+      background: #ccc;
+      transform: scale(1.04);
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 7%;
+    }
+
+    .section-title {
+      font-size: 35px;
+      letter-spacing: 4px;
+      margin-bottom: 45px;
+    }
+
+    /* PRODUCT */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: #101010;
+      border: 1px solid #222;
+      overflow: hidden;
+      transition: 0.25s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      border-color: #555;
+    }
+
+    .product-image {
+      height: 420px;
+      background: #171717;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #555;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-info h3 {
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+
+    .product-info p {
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    .shop-button {
+      display: block;
+      margin-top: 20px;
+      padding: 14px;
+      background: white;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #0b0b0b;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 50px 7%;
+      text-align: center;
+    }
+
+    footer h2 {
+      letter-spacing: 5px;
+      font-size: 25px;
+    }
+
+    footer p {
+      color: #666;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    .socials {
+      margin-top: 25px;
+    }
+
+    .socials a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      nav {
+        padding: 0 20px;
+      }
+
+      nav a {
+        margin-left: 12px;
+        font-size: 9px;
+      }
+
+      .nav-logo {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      .hero p {
+        letter-spacing: 4px;
+      }
+
+      .product-image {
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-logo">SAINTS</div>
+
+    <div>
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>SAINTS</h1>
+
+    <p>STREETWEAR</p>
+
+    <a href="#shop" class="hero-button">
+      SHOP THE DROP
+    </a>
+
+  </section>
+
+
+  <!-- SHOP -->
+
+  <section id="shop">
+
+    <h2 class="section-title">THE DROP</h2>
+
+    <div class="product-grid">
+
+      <div class="product">
+
+        <div class="product-image">
+          SAINTS SHORTS
+        </div>
+
+        <div class="product-info">
+
+          <h3>SAINTS TRIBAL SHORTS</h3>
+
+          <p>$XX.XX</p>
+
+          <a href="#" class="shop-button">
+            COMING SOON
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2 class="section-title">
+      SAINTS
+    </h2>
+
+    <p>
+      SAINTS is an independent streetwear brand built around
+      bold graphics, clean silhouettes and raw street culture.
+      More than clothing — it's a statement.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>SAINTS</h2>
+
+    <div class="socials">
+      <a href="#">INSTAGRAM</a>
+      <a href="#">TIKTOK</a>
+    </div>
+
+    <p>
+      © 2026 SAINTS STREETWEAR. ALL RIGHTS RESERVED.
+    </p>
+
+  </footer>
+
+</body>
+</html>
